@@ -1,0 +1,37 @@
+@import './fonts.css';
+@import './wrapper.css';
+@import './result.css';
+@import './limitations.css';
+@import './recommendations.css';
+@import './calculator.css';
+
+:root {
+  --blue: rgb(52, 95, 246);
+  --gun-metal: rgb(37, 51, 71); 
+  --dark-electric-blue: rgb(94, 110, 133);
+  --pure-white: rgb(255, 255, 255);
+  --linear-gradient: linear-gradient(135deg, #ffffff, rgba(214, 252, 254, 0.2), rgba(214, 230, 254, 0.2));
+
+  font-size: 16px;
+  --font-family: Inter, sans-serif;
+  --heading-XL: bold 4rem/110% var(--font-family);
+  --heading-L: bold 3rem/110% var(--font-family);
+  --heading-M: bold 1.5rem/120% var(--font-family);
+  --heading-S: bold 1.25rem/110% var(--font-family);
+  --body-M: normal 1rem/150% var(--font-family);
+  --body-M-bold: bold 1rem/150% var(--font-family);
+  --body-S: normal 0.875em/150% var(--font-family);
+}
+
+body {
+  margin: 0;
+  font: var(--body-M);
+  font-weight: lighter;
+  color: var(--dark-electric-blue);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0;
+  }
+}

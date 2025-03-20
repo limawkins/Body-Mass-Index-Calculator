@@ -1,0 +1,125 @@
+.limitations {
+  margin: 72px 0 96px 0; 
+}
+
+.limitations-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr)); 
+  gap: 1rem;
+}
+
+.limitations-head {
+  margin: 0 0 2.5rem 0; 
+  text-align: center;
+}
+
+.limitations-title {
+  margin: 0 0 2rem 0; 
+  font-size: 2rem;
+  line-height: 110%;
+  letter-spacing: -2px;
+  color: var(--gun-metal);
+}
+
+.limitations-text {
+  margin: 0;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 1rem 2rem 3.5rem rgba(143, 174, 207, 0.25);
+  background-color: var(--pure-white);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-title {
+  margin: 0;
+  font: var(--heading-S);
+  color: var(--gun-metal);
+}
+
+.card-text {
+  margin: 1rem 0 0 0;
+}
+
+.pattern-right {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .limitations-content {
+    row-gap: 1.5rem;
+  }
+
+  .limitations-head {
+    margin: 0 0 2rem 0; 
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .race {
+    width: 22.75rem;
+    box-sizing: border-box;
+    grid-area: 4 / 1 / 5 / 3;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .limitations-content {
+    margin: 0 auto;
+    max-width: 72.5rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 14.5rem 11.5rem 14.5rem;
+    column-gap: 1.95rem;
+    row-gap: 1.75rem;
+  }
+
+  .limitations-head {
+    text-align: left;
+    grid-area: 1 / 1 / 2 / 7;
+  }
+
+  .limitations-title {
+    font: var(--heading-L);
+  }
+
+  .gender {
+    grid-area: 1 / 8 / 2 / 12;
+  }
+
+  .muscle {
+    grid-area: 2 / 9 / 3 / 13;
+  }
+
+  .age {
+    grid-area: 2 / 5 / 3 / 9;
+  }
+
+  .pregnancy {
+    grid-area: 3 / 3 / 4 / 7;
+  }
+
+  .race {
+    grid-area: 3 / 7 / 4 / 11; 
+  }
+
+  .pattern-right {
+    display: block;
+    grid-area: 2 / 2 / 3 / 4;
+    background-image: url('../assets/images/pattern-curved-line-right.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}

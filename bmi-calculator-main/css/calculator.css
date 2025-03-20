@@ -1,0 +1,350 @@
+
+header {
+  margin-bottom: 4.5rem;
+}
+
+
+.calculator {
+  position: relative;
+}
+
+
+.calculator-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 40rem;
+  background: linear-gradient(179deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 0%, rgba(214,238,253,1) 80%, rgba(214,235,253,1) 99%, rgba(213,234,244,1) 99%);
+  border-radius: 0 0 35px 35px;
+}
+
+.calculator-content {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.calculator-head {
+  text-align: center;
+}
+
+.calculator-logo {
+  vertical-align: middle;
+}
+
+.calculator h1 {
+  font: var(--heading-L);
+  color: var(--gun-metal);
+  margin: 1.5rem 0;
+}
+
+.calculator p {
+  margin: 0;
+}
+
+
+.calculator-bmi {
+  padding: 1.5rem;
+  background-color: var(--pure-white);
+  border-radius: 1rem;
+  box-shadow: 1rem 2rem 3.5rem rgba(143, 174, 207, 0.25);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form-section legend {
+  margin-bottom: 1.5rem;
+  padding: 0;
+  font: var(--heading-M);
+  color: var(--gun-metal);
+  letter-spacing: -1.15px;
+}
+
+.radio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.radio-metric,
+.radio-imperial {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+}
+
+.radio input[type="radio"] {
+  margin: 0;
+  appearance: none;
+}
+
+.radio input[type="radio"] {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--dark-electric-blue);
+  border-radius: 50%;
+  vertical-align: middle;
+  outline: none;
+}
+
+.radio input[type="radio"]:hover {
+  cursor: pointer;
+  border-color: var(--blue);
+}
+
+.radio input[type="radio"]:checked {
+  background-color: rgba(52, 95, 246, 0.15);
+  border: none;
+}
+
+.radio input[type="radio"]::before {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--blue);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.radio input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.1s;
+}
+
+.radio label {
+  font: var(--body-M-bold);
+  color: var(--gun-metal);
+}
+
+.metric-container,
+.imperial-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-container,
+.input-container div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.input-container::after,
+.input-container div::after {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font: var(--heading-M);
+  color: var(--blue);
+}
+
+#metric .input-item:nth-child(1) .input-container::after{
+  content: 'cm';
+}
+
+#metric .input-item:nth-child(2) .input-container::after{
+  content: 'kg';
+}
+
+#imperial .input-item:nth-child(1) .input-container div:nth-child(1)::after{
+  content: 'ft';
+}
+
+#imperial .input-item:nth-child(1) .input-container div:nth-child(2)::after{
+  content: 'in';
+}
+
+#imperial .input-item:nth-child(2) .input-container div:nth-child(1)::after{
+  content: 'st';
+}
+
+#imperial .input-item:nth-child(2) .input-container div:nth-child(2)::after{
+  content: 'lbs';
+}
+
+
+.label {
+  font: var(--body-S);
+  display: block;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  font: var(--heading-M);
+  color: var(--gun-metal);
+  border: 1px solid var(--dark-electric-blue);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="number"]:hover {
+  border: 1px solid var(--blue);
+}
+
+
+.output-section {
+  padding: 2rem;
+  background-color: var(--blue);
+  border-radius: 1rem;
+  color: var(--pure-white);
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.output-container p:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#bmi {
+  display: block;
+  font: var(--heading-L);
+  letter-spacing: -3px;
+}
+
+.output-container p:last-child {
+  font: var(--body-S);
+}
+
+.welcome h3{
+  margin: 0 0 1rem 0;
+  font: var(--heading-M);
+}
+
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .calculator h1 {
+    width: 23.75rem;
+    margin: 40px auto 24px auto;
+  }
+
+  .calculator-bmi {
+    padding: 2rem;
+  }
+
+  .form-container {
+    gap: 2rem;
+  }
+
+  .form-section legend {
+    margin-bottom: 2rem;
+  }
+
+  .metric-container {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .input-item {
+    flex-grow: 1;
+  }
+
+  .output-section {
+    border-radius: 13rem 62.5rem 62.5rem 13rem;
+  }
+
+  .output-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .output-container p {
+    flex-basis: 16.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  header {
+    margin-bottom: 1.25rem;
+  }
+
+  .calculator-background {
+    left: 1.5rem;
+    width: 68%;
+    height: 46rem;
+  }
+
+  .calculator-content {
+    padding-top: 4.625rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 6.624rem 37.875rem;
+    row-gap: 0;
+  }
+  
+  .calculator-head {
+    text-align: left;
+  }
+
+  .calculator-logo {
+    width: 4rem;
+  }
+
+  .calculator-head h1 {
+    margin: 8.25rem 0 2.125rem 0;
+    font: var(--heading-XL);
+    width: 32rem;
+  }
+
+  .calculator-head p {
+    width: 29rem;
+  }
+
+  .calculator-bmi {
+    grid-area: 2 / 2;
+    align-self: start;
+  }
+
+  .input-container {
+    gap: 1.5rem;
+  }
+
+  .output-container {
+    gap: 3rem;
+  }
+
+  .welcome p{
+    font: var(--body-S);
+  }
+}

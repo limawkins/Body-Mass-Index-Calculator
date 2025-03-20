@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <title>Калькулятор индекса массы тела</title>
+</head>
+<body>
+ 
+ <header>
+    <section class="calculator">
+      <div class="calculator-background"></div>
+      <div class="wrapper">
+        <div class="calculator-content">
+          <article class="calculator-head">
+            <img src="./assets/images/icon_abstract.png" class="calculator-logo" alt="Logotipo">
+            <h1>Калькулятор индекса массы тела</h1>
+            <p>Лучше понять свой вес по отношению к росту можно 
+              с помощью нашего калькулятора индекса массы тела (ИМТ). 
+              Хотя ИМТ не является единственным фактором, определяющим здоровый вес, 
+              он является ценной отправной точкой 
+              для оценки вашего общего здоровья и самочувствия.</p>
+          </article>
+          <article class="calculator-bmi">
+            <form>
+              <div class="form-container">
+                <fieldset class="form-section">
+                  <legend>Введите данные ниже</legend>
+                    <div class="radio">
+                      <div class="radio-metric">
+                        <input type="radio" name="system" value="metric" id="metric-radio" checked>
+                        <label for="metric-radio">Метрическая система</label>
+                      </div>
+                      <div class="radio-imperial">
+                        <input type="radio" name="system" value="imperial" id="imperial-radio">
+                        <label for="imperial-radio">Британская система</label>
+                      </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section input-section">
+                  <article id="metric">
+                    <div class="metric-container">
+                      <div class="input-item">
+                        <label for="cm" class="label">Рост (см)</label>
+                        <div class="input-container">
+                          <input type="number" id="cm" class="input-metric" placeholder="0" min="0" max="280">
+                        </div>
+                      </div>
+                      <div class="input-item">
+                        <label for="kg" class="label">Вес (кг)</label>
+                        <div class="input-container">
+                          <input type="number" id="kg" class="input-metric" placeholder="0" min="0" max="640">  
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article id="imperial" class="hide">
+                    <div class="imperial-container">
+                      <div class="input-item">
+                        <label for="ft" class="label">Рост (футы и дюймы)</label>
+                          <div class="input-container">
+                            <div>
+                              <input type="number" id="ft" class="input-imperial" placeholder="0" min="0">
+                            </div>
+                            <div>
+                              <input type="number" id="pulg" class="input-imperial" placeholder="0" min="0">
+                            </div>
+                          </div>
+                      </div>
+                      <div class="input-item">
+                        <label for="st" class="label">Вес (стоуны и фунты)</label>
+                        <div class="input-container">
+                          <div>
+                            <input type="number" id="st" class="input-imperial" placeholder="0" min="0">
+                          </div>
+                          <div>
+                            <input type="number" id="lbs" class="input-imperial" placeholder="0" min="0"> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </fieldset>
+
+                <fieldset class="form-section output-section">
+                  <div class="welcome hide">
+                    <h3>Добро пожаловать</h3>
+                    <p>Введите ваш рост и вес, чтобы увидеть результат ИМТ.</p>
+                  </div>
+                  <div class="output-container">
+                    <p>Ваш ИМТ... <output id="bmi">23.4</output></p> 
+                    <p>
+                      Ваш ИМТ показывает, что у вас <strong><output id="classification">здоровый вес</output></strong>.
+                      Ваш идеальный вес находится в диапазоне <strong><output id="range">63.3 кг - 85.2 кг</output></strong>. <
+                    </p>
+                  </div>
+                </fieldset>
+              </div>
+            </form>
+          
+          </article>
+        </div>
+      </div>
+    </section>
+ </header>
+ 
+  <main>
+     <section class="result">
+        <div class="wrapper">
+          <div class="result-content">
+            <img src="./assets/images/image-man-eating.webp" alt="Image man eating" class="result-image">
+            <div class="result-body">
+              <h2 class="result-title">Что означает ваш результат ИМТ?</h2>
+              <p class="result-text">
+                Диапазон ИМТ от 18,5 до 24,9 считается "здоровым весом". 
+                Поддержание нормального веса снижает риск таких проблем, как ожирение и диабет 2 типа. 
+                Следите за питанием, ограничьте жиры и сахар, включайте больше фруктов и овощей. 
+                Рекомендуется умеренная физическая активность около 30 минут в день 5 раз в неделю.
+              </p>
+            </div>
+          </div>
+        </div>
+     </section>
+
+    <section class="recommendations">
+      <div class="recommendations-content">
+        <artricle class="recommendations-item">
+          <img src="./assets/images/icon-eating.svg" alt="Icon eating" class="recommendations-image">
+          <div class="recommendations-body">
+            <h3 class="recommendations-title">Здоровое питание</h3>
+            <p class="recommendations-text">
+              Здоровое питание способствует контролю веса, профилактике заболеваний, 
+              улучшению пищеварения, иммунитета, ясности ума и настроения.
+            </p>
+          </div>
+        </artricle>
+
+        <artricle class="recommendations-item">
+          <img src="./assets/images/icon-exercise.svg" alt="Icon exercise" class="recommendations-image">
+          <div class="recommendations-body">
+            <h3 class="recommendations-title">Регулярные упражнения</h3>
+            <p class="recommendations-text">
+              Физические упражнения улучшают физическую форму, помогают контролировать вес, 
+              поднимают настроение и снижают риск заболеваний, 
+              способствуя хорошему самочувствию и долголетию.
+            </p>
+          </div>
+        </artricle>
+
+        <artricle class="recommendations-item">
+          <img src="./assets/images/icon-sleep.svg" alt="Icon sleep" class="recommendations-image">
+          <div class="recommendations-body">
+            <h3 class="recommendations-title">Полноценный сон</h3>
+            <p class="recommendations-text">
+              Сон способствует ясности ума, эмоциональной стабильности и физическому здоровью, 
+              способствуя общему восстановлению и омоложению.
+            </p>
+          </div>
+        </artricle>
+      </div>
+    </section>
+
+    <section class="limitations">
+      <div class="wrapper">
+        <div class="limitations-content">
+          <div class="limitations-head">
+            <h2 class="limitations-title"> Ограничения ИМТ</h2>
+            <p class="limitations-text">
+              Хотя индекс массы тела часто является практическим показателем здорового веса, он не подходит 
+              для каждого человека. Особым группам населения следует тщательно подходить к определению ИМТ, 
+              а в некоторых случаях это измерение может оказаться бесполезным.
+            </p>
+          </div>
+          
+          <article class="card gender">
+            <div class="card-header">
+              <img src="./assets/images/icon-gender.svg" alt="Icon Gender" class="card-image">
+              <h4 class="card-title">Пол</h4>
+            </div>
+            <p class="card-text">
+              Развитие и состав жировой ткани у девочек и мальчиков меняются с возрастом. 
+              Поэтому при оценке ИМТ ребенка учитываются его возраст и пол.
+            </p>
+          </article>
+      
+          <article class="card age">
+            <div class="card-header">
+              <img src="./assets/images/icon-age.svg" alt="Icon Age" class="card-image">
+              <h4 class="card-title">Возраст</h4>
+            </div>
+            <p class="card-text">
+              У пожилых людей увеличивается жир и уменьшается мышечная масса.
+              Из-за этого ИМТ может занижать содержание жира в организме.
+            </p>
+          </article>
+      
+          <article class="card muscle">
+            <div class="card-header">
+              <img src="./assets/images/icon-muscle.svg" alt="Icon Muscle" class="card-image">
+              <h4 class="card-title">Мышцы</h4>
+            </div>
+            <p class="card-text">
+              ИМТ может ошибочно считать людей с развитой мускулатурой полными, так как не различает мышцы и жир.
+            </p>
+          </article>
+      
+          <article class="card pregnancy">
+            <div class="card-header">
+              <img src="./assets/images/icon-pregnancy.svg" alt="Icon Pregnancy" class="card-image">
+              <h4 class="card-title">Беременность</h4>
+            </div>
+            <p class="card-text">
+              Будущие мамы набирают вес из-за роста ребенка. 
+              Поддержание здорового ИМТ до беременности помогает
+               снизить риски для здоровья матери и ребенка.
+            </p>
+          </article>
+    
+          <article class="card race">
+            <div class="card-header">
+              <img src="./assets/images/icon-race.svg" alt="Icon Race" class="card-image">
+              <h4 class="card-title">Раса</h4>
+            </div>
+            <p class="card-text">
+              У людей африканского и азиатского происхождения проблемы со 
+              здоровьем могут возникать при более низком ИМТ. 
+              Лучше проконсультироваться с врачом.
+            </p>
+          </article>
+    
+           <div class="pattern-right"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+<script src="./js/script.js"></script>
+</Body>
+</html>
